@@ -29,14 +29,14 @@ export default class AthletePage extends React.Component {
           <section className = 'description'>
             Olympic medalist from <strong><Flag code = {athlete.country} showName = 'true'/></strong>, born in {athlete.birth} (Find out more at <a href = {athlete.link} target = '_blank'>Wikipedia</a>).
           </section>
-          <section className = 'medals'>
+          <section className ='medals'>
             <p>Winner of <strong>{athletes.medal.length}</strong> medals:</p>
             <ul>{
               athlete.medals.map((medal, i) => <Medal key={i} {...medal}/>)
             }</ul>
           </section>
         </div>
-        <div className = 'navigate-back'>
+        <div className ='navigageBack'>
           <Link to = '/'>Back to the index</Link>
         </div>
       </div>
