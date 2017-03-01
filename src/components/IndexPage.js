@@ -1,8 +1,8 @@
 import React from 'react';
-import AthletesPreview from './AthletesPreview';
+import AthletePreview from './AthletePreview';
 import athletes from '../data/athletes';
 
-export default class IndexPage extend React.Component {
+export default class IndexPage extends React.Component {
   render () {
     return (
       <div className='home'>

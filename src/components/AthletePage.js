@@ -6,14 +6,14 @@ import Medal from './Medal';
 import Flag from './Flag';
 import athletes from '../data/athletes';
 
-export default class AthletesPage extend React.Component {
+export default class AthletePage extends React.Component {
   render () {
     const id = this.props.params.id;
     const athlete = athletes.filter((athlete) => athlete.id === id)[0];
 
     if (!athlete) {
       return <NotFoundPage/>;
-    }
+    };
 
     const headerStyle = { backgroundImage: `url(/img/${athlete-cover})`};
 
@@ -21,9 +21,9 @@ export default class AthletesPage extend React.Component {
       <div className = 'athlete-full'>
         <AthletesMenu athletes={athletes}/>
         <div className = 'athlete'>
-          <header style= {headerStyle} />
+          <header style= {headerStyle}/>
           <div className = 'picture-container'>
-            <img src = {`/img/${athlete.image}`}/>
+            <img src={`/img/${athlete.image}`}/>
             <h2 className = 'name'>{athlete.name}</h2>
           </div>
           <section className = 'description'>
