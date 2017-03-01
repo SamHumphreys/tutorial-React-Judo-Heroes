@@ -45,7 +45,7 @@ app.get('*', (req, res) => {
 
       //render the index template with the embedded React markup
       return res.render('index', {markup});
-    };
+    }
   );
 });
 
@@ -56,5 +56,5 @@ server.listen(port, err => {
   if (err) {
     return console.error(err);
   };
-  console.info('Server running on http://localhost:${port} [${env}]');
+  console.info(`Server running on http://localhost:${port} [${env}]`);
 });
